@@ -162,3 +162,7 @@ cython_debug/
 # DS_Store on OSX
 **/.DS_Store
 .DS_Store
+
+# Tableau intermediate
+**/*.twbr
+*.twbr
