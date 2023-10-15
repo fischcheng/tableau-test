@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.23.0911.0839                               -->
+<workbook original-version='18.1' source-build='2021.4.22 (20214.23.0911.0839)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <ISO8601DefaultCalendarPref />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='tableau.mit.edu' inline='true' name='sqlproxy.1fbiwwd1crizp716aq5d20d0yf9s' version='18.1'>
+      <connection channel='https' class='sqlproxy' directory='/dataserver' port='443' server='tableau.mit.edu' />
+      <overridable-settings>
+        <date-options fiscal-year-start='january' start-of-week='sunday' />
+        <default-date-format />
+        <default-calendar-type>Gregorian</default-calendar-type>
+      </overridable-settings>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph />
+    </datasource>
+    <datasource caption='bluebikes (sustain.bluebikes) (dsg_prod)' inline='true' name='federated.0xofxve1b1vmz81fp8rhw1ei4dqy' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='energize-mit.cnjgldesfc50.us-east-1.rds.amazonaws.com' name='postgres.1bo4mzk1fg3kai10po8q110o6lvy'>
+            <connection authentication='username-password' class='postgres' dbname='dsg_prod' odbc-native-protocol='' one-time-sql='' port='5432' server='energize-mit.cnjgldesfc50.us-east-1.rds.amazonaws.com' username='sustainability' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.1bo4mzk1fg3kai10po8q110o6lvy' name='bluebikes' table='[sustain].[bluebikes]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='postgres.1bo4mzk1fg3kai10po8q110o6lvy' name='bluebikes' table='[sustain].[bluebikes]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>member_number</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[member_number]</local-name>
+            <parent-name>[bluebikes]</parent-name>
+            <remote-alias>member_number</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8190</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[bluebikes (sustain.bluebikes)_C0296790679E47A6BFBB5300E18C5291]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ride_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[ride_date]</local-name>
+            <parent-name>[bluebikes]</parent-name>
+            <remote-alias>ride_date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[bluebikes (sustain.bluebikes)_C0296790679E47A6BFBB5300E18C5291]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[duration]</local-name>
+            <parent-name>[bluebikes]</parent-name>
+            <remote-alias>duration</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[bluebikes (sustain.bluebikes)_C0296790679E47A6BFBB5300E18C5291]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start_City</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Start_City]</local-name>
+            <parent-name>[bluebikes]</parent-name>
+            <remote-alias>Start_City</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8190</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[bluebikes (sustain.bluebikes)_C0296790679E47A6BFBB5300E18C5291]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>End_City</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[End_City]</local-name>
+            <parent-name>[bluebikes]</parent-name>
+            <remote-alias>End_City</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8190</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[bluebikes (sustain.bluebikes)_C0296790679E47A6BFBB5300E18C5291]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Type]</local-name>
+            <parent-name>[bluebikes]</parent-name>
+            <remote-alias>Type</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8190</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[bluebikes (sustain.bluebikes)_C0296790679E47A6BFBB5300E18C5291]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Routes1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Routes1]</local-name>
+            <parent-name>[bluebikes]</parent-name>
+            <remote-alias>Routes1</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8190</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[bluebikes (sustain.bluebikes)_C0296790679E47A6BFBB5300E18C5291]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripID</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[tripID]</local-name>
+            <parent-name>[bluebikes]</parent-name>
+            <remote-alias>tripID</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[bluebikes (sustain.bluebikes)_C0296790679E47A6BFBB5300E18C5291]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Station_Status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Station_Status]</local-name>
+            <parent-name>[bluebikes]</parent-name>
+            <remote-alias>Station_Status</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8190</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[bluebikes (sustain.bluebikes)_C0296790679E47A6BFBB5300E18C5291]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Station_Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Station_Name]</local-name>
+            <parent-name>[bluebikes]</parent-name>
+            <remote-alias>Station_Name</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8190</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[bluebikes (sustain.bluebikes)_C0296790679E47A6BFBB5300E18C5291]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[bluebikes]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[bluebikes (sustain.bluebikes)_C0296790679E47A6BFBB5300E18C5291]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[bluebikes]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[bluebikes (sustain.bluebikes)_C0296790679E47A6BFBB5300E18C5291]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='End City' datatype='string' name='[End_City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Start City' datatype='string' name='[Start_City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Station Name' datatype='string' name='[Station_Name]' role='dimension' type='nominal' />
+      <column caption='Station Status' datatype='string' name='[Station_Status]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='bluebikes' datatype='table' name='[__tableau_internal_object_id__].[bluebikes (sustain.bluebikes)_C0296790679E47A6BFBB5300E18C5291]' role='measure' type='quantitative' />
+      <column caption='Duration' datatype='integer' name='[duration]' role='measure' type='quantitative' />
+      <column caption='Member Number' datatype='string' name='[member_number]' role='dimension' type='nominal' />
+      <column caption='Ride Date' datatype='date' name='[ride_date]' role='dimension' type='ordinal' />
+      <column caption='Trip ID' datatype='integer' name='[tripID]' role='dimension' type='ordinal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='bluebikes' id='bluebikes (sustain.bluebikes)_C0296790679E47A6BFBB5300E18C5291'>
+            <properties context=''>
+              <relation connection='postgres.1bo4mzk1fg3kai10po8q110o6lvy' name='bluebikes' table='[sustain].[bluebikes]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Test Bike</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='bluebikes (sustain.bluebikes) (dsg_prod)' name='federated.0xofxve1b1vmz81fp8rhw1ei4dqy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0xofxve1b1vmz81fp8rhw1ei4dqy'>
+            <column caption='Duration' datatype='integer' name='[duration]' role='measure' type='quantitative' />
+            <column caption='Ride Date' datatype='date' name='[ride_date]' role='dimension' type='ordinal' />
+            <column-instance column='[duration]' derivation='Sum' name='[sum:duration:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ride_date]' derivation='Year' name='[yr:ride_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0xofxve1b1vmz81fp8rhw1ei4dqy].[sum:duration:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.0xofxve1b1vmz81fp8rhw1ei4dqy].[yr:ride_date:ok]</rows>
+        <cols>[federated.0xofxve1b1vmz81fp8rhw1ei4dqy].[sum:duration:qk]</cols>
+      </table>
+      <simple-id uuid='{F98AD4E1-287E-46D2-85EC-0A5949394124}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='51'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0xofxve1b1vmz81fp8rhw1ei4dqy].[sum:duration:qk]</field>
+            <field>[federated.0xofxve1b1vmz81fp8rhw1ei4dqy].[yr:ride_date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4380A851-D6DF-4B15-BD3A-4E0A653B5E93}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='139' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

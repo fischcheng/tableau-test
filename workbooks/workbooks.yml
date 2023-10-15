@@ -1,0 +1,4 @@
+workbooks:
+    - name: dummy_workbook
+      file_path: bike_duration.twb
+      project_path: sustainability
