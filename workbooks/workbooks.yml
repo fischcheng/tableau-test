@@ -2,3 +2,8 @@ workbooks:
     - name: test_action
       file_path: bike_duration.twb
       project_path: sustainability_test
+      option:
+        tags:
+          - sample
+        show_tabs: true
+        description: This is a simple test
