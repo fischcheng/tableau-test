@@ -1,4 +1,4 @@
 workbooks:
-    - name: dummy_workbook
+    - name: test_action
       file_path: bike_duration.twb
-      project_path: sustainability
+      project_path: sustainability_test
