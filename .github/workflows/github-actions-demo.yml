@@ -24,4 +24,4 @@ jobs:
             workbook_dir: workbooks
             env: staging
             repo_token: ${{ github.token }}
-      - run: echo "🍏 This job's status is ${{ job.status }}.
+      - run: echo "🍏 This job's status is ${{ job.status }}."
