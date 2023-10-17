@@ -1,12 +1,10 @@
 workbooks:
-    - name: dummy_workbook
+    - name: test_workbook
       file_path: bike_duration.twb
       project_path: sustainability_test
       option:
         tags:
           - sample
           - temp
-        hidden_views:
-          - Event by day
         show_tabs: true
-        description: Sample description
+        description: Sample description, here we go!!
