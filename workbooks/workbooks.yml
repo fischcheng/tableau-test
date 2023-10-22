@@ -1,4 +1,12 @@
 workbooks:
-    - name: dummy_workbook
+    - name: test_workbook
       file_path: bike_duration.twb
-      project_path: sustainability
+      project_path: Sustainability Test
+      option:
+        tags:
+          - sample
+          - temp
+          - one
+          - tennis
+        show_tabs: true
+        description: Sample description, here we go!!

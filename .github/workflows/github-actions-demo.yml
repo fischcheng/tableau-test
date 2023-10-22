@@ -2,26 +2,27 @@ name: Test Tableau Publishing action
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 #on: [push]
 on:
-    push:
-      branches:
-        - main
+    pull_request:
+        branches:
+          - main
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - uses: actions/checkout@v4.1.0
+      - run: echo "🔎 Now use the modified action from ${{ github.repository }}."
       - name: Tableau Workbook Action
-        uses: jayamanikharyono/tableau-workbook-action@v1.5
+        uses: fischcheng/tableau-workbook-action@main
         env:
             USERNAME: ${{ secrets.TB_USERNAME }}
             PASSWORD: ${{ secrets.TB_PASSWORD }}
-            SITE_ID: '' #${{ secrets.TB_SITE_ID }}
+            SITE_ID: ${{ secrets.TB_SITE_ID }}
             TABLEAU_URL: ${{ secrets.TB_URL }}
         with:
-            workbook_dir: workbooks
-            env: staging
+            workbook_dir: workbooks/
             repo_token: ${{ github.token }}
-      - run: echo "🍏 This job's status is ${{ job.status }}.
+      - run: echo "🍏 This job's status is ${{ job.status }}."
