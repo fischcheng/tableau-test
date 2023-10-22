@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4.1.0
       - run: echo "🔎 Now use the modified action from ${{ github.repository }}."
       - name: Tableau Workbook Action
-        uses: fischcheng/tableau-workbook-action
+        uses: fischcheng/tableau-workbook-action@main
         env:
             USERNAME: ${{ secrets.TB_USERNAME }}
             PASSWORD: ${{ secrets.TB_PASSWORD }}
